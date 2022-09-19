@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                             Intent intent = new Intent(getApplicationContext(), Candidatos.class);
                             startActivity(intent);
 
-                        //Indica que ya ha votado
+                            //Indica que ya ha votado
                         } else{
                             Toast.makeText(MainActivity.this,"USTED HA VOTADO", Toast.LENGTH_SHORT).show();
                         }
