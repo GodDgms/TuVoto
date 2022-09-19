@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Candidatos">
+
+    <TextView
+        android:id="@+id/LbTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Candidatos"
+        android:textAlignment="center"
+        android:textSize="48dp" />
+
+    <ImageView
+        android:id="@+id/ImCand1"
+        android:layout_width="136dp"
+        android:layout_height="95dp"
+        android:layout_below="@+id/LbTitulo"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/tres" />
+
+    <ImageView
+        android:id="@+id/ImCand2"
+        android:layout_width="136dp"
+        android:layout_height="175dp"
+        app:srcCompat="@drawable/dos"
+        android:layout_below="@+id/ImCand1"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        />
+
+    <ImageView
+        android:id="@+id/ImCand3"
+        android:layout_width="142dp"
+        android:layout_height="146dp"
+        android:layout_below="@id/ImCand2"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/uno" />
+
+
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="470dp"
+        android:layout_below="@+id/LbTitulo"
+        android:layout_toRightOf="@+id/ImCand1"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="40dp"
+    >
+
+        <Space
+            android:layout_width="1dp"
+            android:layout_height="40dp"/>
+
+
+        <RadioButton
+            android:id="@+id/RBcandidato1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Martin Candanedo"
+            />
+
+        <Space
+            android:layout_width="1dp"
+            android:layout_height="100dp"/>
+
+
+        <RadioButton
+            android:id="@+id/RBcandidato2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Omar Aizpurua" />
+
+        <Space
+            android:layout_width="1dp"
+            android:layout_height="140dp"/>
+
+
+        <RadioButton
+            android:id="@+id/RBcandidato3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Vivían Valenzuela" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/Bvotar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Votar"
+        android:layout_below="@id/ImCand3"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="50dp"/>
+
+
+</RelativeLayout>
