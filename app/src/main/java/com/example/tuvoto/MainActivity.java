@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText ETcedula;
     private Button Bentrar, Bresultado;
     private boolean NO = false;
+    
     //Declaration of variables
 
     //Lista de cedulas del salon
