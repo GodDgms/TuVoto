@@ -74,7 +74,7 @@ public class Resultado extends AppCompatActivity {
             Control.menor = Control.vc1;
         }
         else {
-            vm.setText("");
+            vm.setText("Estan igual");
         }
 
 
