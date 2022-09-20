@@ -63,12 +63,15 @@ public class Resultado extends AppCompatActivity {
 
         if (Control.vc2 < Control.vc1 && Control.vc2 < Control.vc3){
             vm.setText("El menor voto lo tiene Omar Aizpurua");
+            Control.menor = Control.vc2;
         }
          else if (Control.vc1 < Control.vc2 && Control.vc1 < Control.vc3) {
             vm.setText("El menor voto lo tiene Martin Candanedo");
+            Control.menor = Control.vc1;
          }
         else if (Control.vc3 < Control.vc2 && Control.vc3 < Control.vc1) {
             vm.setText("El menor voto lo tiene Vivian Valenzuela");
+            Control.menor = Control.vc1;
         }
         else {
             vm.setText("");
