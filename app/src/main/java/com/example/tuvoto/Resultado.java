@@ -12,7 +12,7 @@ import android.widget.TextView;
 public class Resultado extends AppCompatActivity {
 
     //Declaration of variables
-    private TextView TVcandidato1, TVcandidato2, TVcandidato3, TVganador, ve;
+    private TextView TVcandidato1, TVcandidato2, TVcandidato3, TVganador, ve, vm;
     private Button Bprincipal;
     //Declaration of variables
 
@@ -28,6 +28,7 @@ public class Resultado extends AppCompatActivity {
         TVganador=findViewById(R.id.TVganador);
         Bprincipal=findViewById(R.id.Bprincipal);
         ve=findViewById(R.id.ve);
+        vm=findViewById(R.id.vm);
         //Assign the Button's value to a variable
 
         TVcandidato1.setText("Martin Candanedo tiene: " + Control.p1 +"%");
@@ -51,7 +52,7 @@ public class Resultado extends AppCompatActivity {
                 TVganador.setText("Los ganadores son Martin Candanedo y Omar Aizpurua");
             } else if (Control.vc2 == Control.vc3) {
                 TVganador.setText("Los ganadores son Omar Aizpurua y Vivian Valenzuela");
-                //NO SIRVE EL HRMP
+
             } else {
                 TVganador.setText("");
             }
@@ -59,6 +60,20 @@ public class Resultado extends AppCompatActivity {
         else {
             TVganador.setText("Aun no hay suficientes votos");
         }
+
+        if (Control.vc2 < Control.vc1 && Control.vc2 < Control.vc3){
+            vm.setText("El menor voto lo tiene Omar Aizpurua");
+        }
+         else if (Control.vc1 < Control.vc2 && Control.vc1 < Control.vc3) {
+            vm.setText("El menor voto lo tiene Martin Candanedo");
+         }
+        else if (Control.vc3 < Control.vc2 && Control.vc3 < Control.vc1) {
+            vm.setText("El menor voto lo tiene Vivian Valenzuela");
+        }
+        else {
+            vm.setText("");
+        }
+
 
         //Give a instruction to a Button
         Bprincipal.setOnClickListener(new View.OnClickListener() {
